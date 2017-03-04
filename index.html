@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>New York Times Search</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+
+<body>
+
+  <h1>New York Times Search</h1>
+  <div class="container">
+    <div class="form-group">
+      <label for="searchTerms">Search Term</label>
+      <input type="text" class="form-control fields" id="search-term">
+    </div>
+    <div class="form-group">
+      <label for="record-count">Number of Records to Return</label>
+      <input type="text" class="form-control fields" id="record-count">
+    </div>
+    <div class="form-group">
+      <label for="start-year">Start Year (Optional)</label>
+      <input type="text" class="form-control fields" id="start-year">
+    </div>
+      <div class="form-group">
+      <label for="end-year">End Year (Optional)</label>
+      <input type="text" class="form-control fields" id="end-year">
+    </div>
+
+    <button type="submit" class="btn btn-default" id="submit">Submit</button>
+    <button type="reset" class="btn btn-default" id="reset">Reset</button>
+  </div>
+
+  <div id = "top-articles">
+    <div id = "result-header">Top Articles</div>
+  </div>
+
+  <script type="text/javascript" src="nyTimes.js"></script>
+</body>
+
+</html>

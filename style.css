@@ -1,0 +1,38 @@
+body {
+	
+}
+
+h1 {
+	font-size: 78px;
+	margin: 0 auto;
+	background: #800020;
+	color: white;
+	padding: 50px;
+	width: 80%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.container {
+		border: solid 1px #800020;
+		margin-top: 20px;
+		border-radius: 5px;
+		width: 80%;
+}
+
+#top-articles {
+	border: solid 1px #800020;
+	border-radius: 4px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+	height: 50px;
+}
+
+#result-header {
+	height: 25px;
+	background: #800020;
+	color: white;
+	font-weight: bold;
+	padding-left: 20px;
+}
