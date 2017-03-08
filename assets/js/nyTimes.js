@@ -1,8 +1,40 @@
-// when the search button is clicked, the following function will execute
-$("#submit").on("click", function(event){
+// creating a variable for my API key
+var authKey = "df60725129474a40a45825404ce24c3a";
 
-  // prevent form from submitting/refreshing the page
-  event.preventDefault();
+// each of these variables corresponds to user input boxes
+var searchTerms = "";
+var numArticles = 0;
+var startYear = 0;
+var endYear = 0;
+
+// creating a query url based on the query term
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
+
+// creating a function that will run our search
+// the function requires two paramenters:
+// number of articles and the final url
+function runSearch(numArticles, queryURL){
+
+  // request data from api using AJAX
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+  // process AJAX call
+  .done(function() {
+    console.log("url: " + queryURL);
+
+
+  });
+}
+
+
+
+
+
+
+//when the search button is clicked, the following function will execute
+$("#submit").on("click", function(event){
 
   // get user input from all text boxes and logging it
   var searchTerms = $("#search-terms").val().trim();
@@ -17,21 +49,7 @@ $("#submit").on("click", function(event){
   var endYear = $("#end-year").val().trim();
   console.log(endYear);
 
-  // variable for my api key
-  var authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
-
-  // constructing the url
-  var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey 
-                  + "&q=" + searchTerms
-                  + "&page=1&begin_date=" + startYear + "0000"
-                  + "&end_date=" + endYear + "0000";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-    }).done(function(response) {
-
-
-
+  // calling the runSearch function
+  runSearch(numArticles, queryURL);
 
 });
